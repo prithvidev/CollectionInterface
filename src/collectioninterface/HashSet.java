@@ -1,16 +1,17 @@
 package collectioninterface;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class CollectionInterface {
+public class Hashset {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int ch = 0;
         HashSet<String> hs = new HashSet<String>();
-        while(ch != 7){
-            System.out.println("ENTER YOUR CHOICE/n"+ "1)ADD, 2)REMOVE, 3)CLEAR, 4)CONTAINS, 5)isEMPTY, 6)SIZE 7)EXIT");
+        while(ch != 8){
+            System.out.println("ENTER YOUR CHOICE"+ "1)ADD, 2)REMOVE, 3)CLEAR, 4)CONTAINS, 5)isEMPTY, 6)SIZE, 7)DISPLAY 8)EXIT");
             ch = sc.nextInt();
             switch(ch){
                 case 1:
@@ -53,6 +54,15 @@ public class CollectionInterface {
                 {
                 int h = hs.size();
                 System.out.println("SIZE OF HASHSET IS:"+h);
+                break;
+                }
+                case 7:
+                {
+                Iterator it = hs.iterator();
+                while(it.hasNext()){
+                    String s = (String)it.next();
+                    System.out.println(s);
+                }
                 break;
                 }
                 default:
