@@ -79,7 +79,7 @@ public class Arraylist {
                     System.out.println("Displaying Elements in the Backward Direction:\n");
                     while(li.hasPrevious()){
                         int ii = li.previous();
-                        System.out.print(li+" ");
+                        System.out.print(ii+" ");
                     }
                     System.out.println("\n");
                     break;
